@@ -138,3 +138,34 @@ if not e.isdigit():
     print("bleu")
 
 
+numeros = 0
+lista1 = []
+while numeros <= 3:
+    j = numeros + 1
+    i = input("Insira o %iº número: " % j)
+    lista1.append(i)
+    numeros += 1
+
+numeros = len(lista1)
+
+notas = float(0)
+for i in lista1:
+    j = float(i)
+    notas = float(notas + j)
+nota_final = float(notas)
+media = round(nota_final/numeros, 2)
+
+print("A média é: %s" % media)
+
+i = input("Quantos metros? ")
+metros = float(i)
+centimetros = 100
+resultado = metros * centimetros
+print("%s centímetros" % resultado)
+
+i = input("Raio do círculo: ")
+raio = float(i)
+raio_q = raio * raio
+resultado = round(3.1415926535898 * raio_q,3)
+print(resultado)
+
