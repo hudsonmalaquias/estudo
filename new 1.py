@@ -167,5 +167,18 @@ i = input("Raio do círculo: ")
 raio = float(i)
 raio_q = raio * raio
 resultado = round(3.1415926535898 * raio_q,3)
-print(resultado)
+print("A área do círculo é de %s metros" % resultado)
+
+i = input("Lado do quadrado: ")
+lado = float(i)
+resultado = lado * lado
+dobro = resultado * 2
+print("A área do quadrado é de %s metros e o dobro da área é %s metros" % (resultado,dobro))
+
+s = input("Quanto recebe por hora: ")
+salario = float(s)
+h = input("Número de horas trabalhadas no mês: ")
+horas = float(h)
+resultado = salario * horas
+print("Seu salário é de R$%s reais." % resultado) 
 
