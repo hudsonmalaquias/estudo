@@ -1,5 +1,5 @@
-
 #criação de uma classe
+'''
 class carro:
     nome = ""
     tipo = ""
@@ -90,12 +90,6 @@ if "Jake" in phonebook:
 if "Jill" not in phonebook:      
     print("Jill não está listado na lista de telefone.")  
 
-print('\n')
-print('\n')
-print('\n')
-print('\n')
-print('\n')
-
 listadomercado = ["ovos", "farinha", "leite", "maças"]
 
 print(listadomercado)
@@ -136,7 +130,6 @@ e = 'as'
 
 if not e.isdigit():
     print("bleu")
-
 
 numeros = 0
 lista1 = []
@@ -182,3 +175,130 @@ horas = float(h)
 resultado = salario * horas
 print("Seu salário é de R$%s reais." % resultado) 
 
+lst1 = ['a','b','d','a','e']
+lst2 = ['a','b','c','d','a']
+n = (len(lst1))
+print(n)
+j = 0
+lst3 = []
+
+while j < n:
+    if lst1[j] == lst2[j]:
+        lst3.append('1')
+        j += 1
+    else:
+        j += 1
+    
+    #lst3 = [i for i in lst1 if i in lst2]
+
+print(len(lst3))
+
+vogais = ['a','e','i','o','u']
+
+i = input("letra: ")
+if i in vogais:
+    print("vogal")
+else:
+    print("consoante")
+
+a = input("NOTA 1: ")
+b = input("NOTA 2: ")
+c = float(a)
+d = float(b)
+
+if (c+d) / 2 == 10:
+    print("distição")
+elif (c+d) / 2 >= 7:
+    print("passou")
+else:
+    print("reprovou")
+    
+a = input("NUMERO 1: ")
+b = input("NUMERO 2: ")
+c = input("NUMERO 3: ")
+lst = []
+lst.append(a)
+lst.append(b)
+lst.append(c)
+print(sorted(lst))
+lst.sort(reverse=True)
+print(lst)
+
+a = input("Qual o turno que estuda (M - Matutino; V - Vespertino; N - Noturno)?  ")
+if a == "M" or a == "m":
+    print("Bom Dia!")
+elif a == "V" or a == "v":
+    print("Boa Tarde")
+elif a == "N" or a == "n":
+    print("Boa Noite!")
+else:
+    print("Valor Inválido!")
+ 
+a = input("Salário:  ")
+z = float(a)
+b = float(a)
+per = 0
+
+def jeba():
+    print("Salário antes do reajuste: R$%.2f" % z)
+    print("Aumento aplicado: R$%.2f" % per)
+    print("Salário após o aumento: R$%.2f" % b)
+
+if b <= 280:
+    per = ((b*20)/100)
+    b = float(b + per)
+    print("Percentual aplicado: 20%")
+    jeba()
+elif b > 280 and b <= 700:
+    per = ((b*15)/100)
+    b = float(b + per)
+    print("Percentual aplicado: 15%")
+    jeba()
+elif b > 700 and b <= 1500:
+    per = ((b*10)/100)
+    b = float(b + per)
+    print("Percentual aplicado: 10%")
+    jeba()
+elif b > 1500:
+    per = ((b*5)/100)
+    b = float(b + per)
+    print("Percentual aplicado: 5%")
+    jeba()
+'''
+
+s = input("Quanto recebe por hora: ")
+salario = float(s)
+h = input("Número de horas trabalhadas no mês: ")
+horas = float(h)
+resultado = salario * horas
+
+def contas():
+    j = str(i)
+    per = "%"
+    ir = ((resultado*i)/100)
+    inss = ((resultado*10)/100)
+    fgts = ((resultado*11)/100)
+    tot_des = ir + inss + fgts
+    sal_liq = resultado - tot_des
+    print("\n")
+    print("______________________________")
+    print("SALÁRIO BRUTO : R$%.2f" % resultado)
+    print("(-) IR (" + j + per + ") : R$%.2f" % ir)
+    print("(-) INSS (10" + per + ") : R$%.2f" % inss)
+    print("(-) FGTS (11" + per + ") : R$%.2f" % fgts)
+    print("TOTAL DE DESCONTOS : R$%.2f" % tot_des)
+    print("SALÁRIO LÍQUIDO : R$%.2f" % sal_liq)
+    print("______________________________")
+
+if resultado <= 900:
+    i = 0
+    contas()
+elif resultado > 900 and resultado <= 1500:
+    i = 5
+    contas()
+elif resultado > 1500 and resultado <=2500:
+    i = 10
+    contas()
+elif resultado > 2500:
+    i = 20
+    contas()
